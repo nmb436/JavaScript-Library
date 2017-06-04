@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+        <title>"WebToMed Website Developer Test"</title>
+    <meta name="description" content="This is a simple CSS, HTML, and JS Test">
+      
+      <style>
+              
+	#div_1{
+        background-color: red;
+        float:left;
+        width:30%;
+        height:50px;
+        text-align: left;
+          }
+    #div_2{
+        background-color: green;
+        float:left;
+        width:35%;
+        height:50px;
+        text-align: center;
+        
+          }
+    #div_3{
+        background-color: blue;
+        float:right;
+        width:35%;
+        height:50px;
+        color: white;
+        text-decoration:underline;
+        font-weight:800;
+        text-align:right;
+          }
+    #div_4{
+        background-color: yellow;
+        
+        height:300px;
+        width:100%;
+          }
+    #div_5{
+            text-align:right;  
+          }
+    #div_6{
+            border: 3px solid black ;
+            margin-top: 10px;
+            padding:20px;
+          }    
+	</style>
+      
+  </head>
+  <body>
+  
+
+
+<!-- Modify this block of divs - START -->
+<div id="sectionone">
+	<div id="div_1">LEFT COL STATIC WIDTH 300px</div>
+	<div id="div_2">CENTER COL DYNAMIC WIDTH</div>
+	<div id="div_3">RIGHT COL STATIC WIDTH 350px</div>
+</div>
+<div id="div_4">
+    
+      <div id="div_5">
+	This text should be centered horizontally and vertically.
+	</div>
+</div>
+<div id="div_6">
+	Div Selector:
+	<select id="chosenDiv">
+  <option value="d1" id="one">Div 1</option>
+  <option value="d2" id="two">Div 2</option>
+  <option value="d3" id="three">Div 3</option>
+    </select>
+
+	<br /><br />
+	Color Selector:
+    <select name="chosenColor" id="chosenColor">
+  <option value="1" class="1">Gray 1</option>
+  <option value="2" class="2">Gray 2</option>
+  <option value="3" class="3">Gray 3</option>
+    </select>
+	<!-- Place Color Select Here -->
+	<!-- Place "Change Color" Button Here -->
+    <button onclick="changeColor()" >Change Color</button>
+</div>
+      
+      
+      <script>
+          
+        function changeColor(){
+        var selection1 = document.getElementById("chosenColor").value;
+        var selection2 = document.getElementById("chosenDiv").value;
+        var div1 = document.getElementById('div_1');
+        var div2 = document.getElementById('div_2');
+        var div3 = document.getElementById('div_3');
+         
+        if (selection1 === "1" && selection2 === "d1"){    
+            div1.style.backgroundColor = '#333333';
+        }
+        else if (selection1 === "2" && selection2 === "d1"){
+            div1.style.backgroundColor = '#777777';
+        }
+        else if (selection1 === "3" && selection2 === "d1"){
+            div1.style.backgroundColor = '#CCCCCC';
+        }
+        else if (selection1 === "1" && selection2 === "d2"){
+            div2.style.backgroundColor = '#333333';
+        }
+        else if (selection1 === "2" && selection2 === "d2"){
+            div2.style.backgroundColor = '#777777';
+        }
+        else if (selection1 === "3" && selection2 === "d2"){
+            div2.style.backgroundColor = '#CCCCCC';
+        }
+        else if (selection1 === "1" && selection2 === "d3"){
+            div3.style.backgroundColor = '#333333';
+        }
+        else if (selection1 === "2" && selection2 === "d3"){
+            div3.style.backgroundColor = '#777777';
+        }
+        else if (selection1 === "3" && selection2 === "d3"){
+            div3.style.backgroundColor = '#CCCCCC';
+        }
+        else{
+            div1.style.backgroundColor = 'white';
+        }
+        
+        }
+      </script>
+      
+      
+  </body>
+</html>
